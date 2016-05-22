@@ -45,6 +45,7 @@
 		<module>web</module>
 		<module>ejb</module>
 		<module>ear</module>
+		<module>service</module>
 	</modules>
 
 	<build>
@@ -65,7 +66,7 @@
 
 			</plugins>
 		</pluginManagement>
-		
+
 	</build>
 
 </project>
