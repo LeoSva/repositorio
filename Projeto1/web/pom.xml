@@ -18,6 +18,12 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>br.com.leo</groupId>
+			<artifactId>ejb</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
