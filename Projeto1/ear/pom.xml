@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.leo</groupId>
+		<artifactId>Projeto1</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>br.com.leo</groupId>
+	<artifactId>ear</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ear</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+	
+		<plugins>
+		
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.10.1</version>
+				<configuration>
+					<version>7</version>
+					<modules>
+						<webModule>
+							<groupId>br.com.leo</groupId>
+							<artifactId>web</artifactId>
+							<bundleFileName>web.war</bundleFileName>
+							<contextRoot>/web</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>br.com.leo</groupId>
+							<artifactId>ejb</artifactId>
+							<bundleFileName>ejb.jar</bundleFileName>
+						</ejbModule>
+					</modules>
+					
+					<displayName>ejb</displayName>
+					<!-- If I want maven to generate the application.xml, set this to true -->
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+		
+		<finalName>ear</finalName>
+		
+	</build>
+
+	<!-- Define the versions of your ear components here -->
+	<dependencies>
+	
+		<dependency>
+			<groupId>br.com.leo</groupId>
+			<artifactId>web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.leo</groupId>
+			<artifactId>ejb</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		
+	</dependencies>
+
+	<packaging>ear</packaging>
+
+</project>
