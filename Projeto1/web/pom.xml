@@ -23,8 +23,9 @@
 			<groupId>br.com.leo</groupId>
 			<artifactId>ejb</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb-client</type>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
