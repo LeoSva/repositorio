@@ -10,9 +10,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>br.com.leo</groupId>
 	<artifactId>ear</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>ear</name>
 	<url>http://maven.apache.org</url>
 
@@ -45,14 +43,14 @@
 							<bundleFileName>web.war</bundleFileName>
 							<contextRoot>/web</contextRoot>
 						</webModule>
-						<ejbModule>
-							<groupId>br.com.leo</groupId>
-							<artifactId>ejb</artifactId>
-							<bundleFileName>ejb.jar</bundleFileName>
-						</ejbModule>
+<!-- 						<ejbModule> -->
+<!-- 							<groupId>br.com.leo</groupId> -->
+<!-- 							<artifactId>ejb</artifactId> -->
+<!-- 							<bundleFileName>ejb.jar</bundleFileName> -->
+<!-- 						</ejbModule> -->
 					</modules>
 					
-					<displayName>ejb</displayName>
+<!-- 					<displayName>ejb</displayName> -->
 					<!-- If I want maven to generate the application.xml, set this to true -->
 					<generateApplicationXml>true</generateApplicationXml>
 				</configuration>
@@ -82,12 +80,12 @@
 			<type>war</type>
 		</dependency>
 		
-		<dependency>
-			<groupId>br.com.leo</groupId>
-			<artifactId>ejb</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<type>ejb</type>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>br.com.leo</groupId> -->
+<!-- 			<artifactId>ejb</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 			<type>ejb</type> -->
+<!-- 		</dependency> -->
 		
 	</dependencies>
 

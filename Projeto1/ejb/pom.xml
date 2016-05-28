@@ -10,17 +10,15 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>br.com.leo</groupId>
 	<artifactId>ejb</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>ejb</name>
 	<packaging>ejb</packaging>
 	<url>http://maven.apache.org</url>
 
 	<build>
-	
+
 		<plugins>
-		
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-ejb-plugin</artifactId>
@@ -30,9 +28,9 @@
 					<generateClient>true</generateClient>
 				</configuration>
 			</plugin>
-			
+
 		</plugins>
-		
+
 	</build>
 
 	<properties>
@@ -40,10 +38,15 @@
 	</properties>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
 		</dependency>
 
 	</dependencies>

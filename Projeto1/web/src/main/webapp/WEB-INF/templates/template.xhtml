@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+ 	<f:loadBundle basename="messages" var="msg" />
+  		
+	<head>
+		<title>
+			<ui:insert name="titulo">Definir o título da Página</ui:insert>
+		</title>
+	</head>
+
+	<body>
+	
+		<div id="header" style="height: 150px; width: 100%; border-style: dashed;">
+			<ui:insert name="header">Definfir o cabeçalho da página</ui:insert>
+		</div>
+				
+		<div id="menu" style="height: 100%; width: 200px; position: absolute; border-style: dashed;">
+			<ui:include src="/WEB-INF/templates/menu.xhtml"  />
+		</div>
+		
+		<div id="body" style="margin-left: 210px;">
+			<ui:insert name="body">Definir o conteúdo da pagina</ui:insert>
+		</div>
+
+	</body>
+		
+</html>
