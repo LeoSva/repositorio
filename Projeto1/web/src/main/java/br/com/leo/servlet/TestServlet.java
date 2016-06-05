@@ -20,10 +20,11 @@ public class TestServlet extends HttpServlet{
 			EnderecoEJB enderecoEJB = (EnderecoEJB) new InitialContext().lookup( "java:app/web/ejb/Endereco" );
 
 			Endereco endereco = enderecoEJB.findById(1);
-			System.out.println( "==================================" );
-			System.out.println( "Rua: " + endereco.getRua() );
-			System.out.println( "==================================" );
-			
+			if( endereco != null ){
+				System.out.println( "==================================" );
+				System.out.println( "Rua: " + endereco.getRua() );
+				System.out.println( "==================================" );
+			}
 //			destroy();
 
 		} catch (Exception e) {
