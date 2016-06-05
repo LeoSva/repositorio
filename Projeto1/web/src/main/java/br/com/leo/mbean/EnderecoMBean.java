@@ -9,7 +9,7 @@ import br.com.leo.business.EnderecoEJB;
 import br.com.leo.entity.Endereco;
 
 @ViewScoped
-@ManagedBean(name="EnderecoMbean")
+@ManagedBean(name="EnderecoMBean")
 public class EnderecoMBean {
 	
 	@EJB
