@@ -1,32 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+	 xmlns:p="http://primefaces.org/ui">
 
-	<ui:composition template="WEB-INF/templates/template.xhtml" >
-	
-		<ui:define name="titulo">
-			Endereço
-		</ui:define>
+	<ui:composition>
+	 
+		<h:panelGrid id="panelEndereco" columns="2" style="width:100%;" >
 		
-		<ui:define name="header">
-			Header
-		</ui:define>
-		
-		<ui:define name="body">
+			<h:outputLabel for="campoRua" value="Rua" />
+			<p:inputText id="campoRua" style="width:100%;" value="#{cadastroClienteMBean.endereco.rua}" />
 			
-			<h:form id="form">
-		
-				<h:outputLabel for="campoRua" value="#{msg['rua']}" />
-				<p:inputText id="campoRua" value="#{EnderecoMBean.endereco.rua}" />
-		
-			</h:form>
+			<h:outputLabel for="campoBairro"  value="Bairro" />
+			<p:inputText id="campoBairro" style="width:100%;" value="#{cadastroClienteMBean.endereco.bairro}" />
 			
-		</ui:define>
-	
+			<h:outputLabel for="campoNumero" value="Número" />
+			<p:inputText id="campoNumero" style="width:10%;" value="#{cadastroClienteMBean.endereco.numero}" />
+			
+			<h:outputLabel for="campoCidade" value="Cidade" />
+			<p:inputText id="campoCidade" style="width:60%;" value="#{cadastroClienteMBean.endereco.cidade}" />
+			
+			<h:outputLabel for="campoCep" value="CEP" />
+			<p:inputText id="campoCep" style="width:20%;" value="#{cadastroClienteMBean.endereco.cep}" />
+			
+			<h:outputLabel for="campoEstado" value="UF" />
+			<p:selectOneMenu id="campoEstado" value="#{cadastroClienteMBean.endereco.estado}" >
+				<f:selectItems value="#{cadastroClienteMBean.listaEstado}" var="item" itemLabel="#{item}" itemValue="#{item}" />
+			</p:selectOneMenu>
+		
+		</h:panelGrid> 
+		
 	</ui:composition>
 
 
-</html>
+</ui:fragment>

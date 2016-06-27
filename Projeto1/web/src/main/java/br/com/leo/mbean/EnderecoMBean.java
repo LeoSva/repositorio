@@ -1,5 +1,8 @@
 package br.com.leo.mbean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -17,10 +20,20 @@ public class EnderecoMBean {
 	
 	private Endereco	endereco;
 	
+	private List<String> listaEstado;
+	
 	@PostConstruct
 	public void init(){
 		
 		try {
+			
+			this.listaEstado = new ArrayList<String>();
+			
+			listaEstado.add( "SP" );
+			listaEstado.add( "RJ" );
+			listaEstado.add( "PE" );
+			listaEstado.add( "AL" );
+			listaEstado.add( "BA" );
 			
 			this.endereco = enderecoEJB.findById(1);
 			
@@ -38,5 +51,9 @@ public class EnderecoMBean {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-
+	
+	public List<String> getListaEstado() {
+		return listaEstado;
+	}
+	
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition>
+	
+		<h:panelGrid id="panelCliente" columns="2" style="width:100%;" >
+		
+			<h:outputLabel for="campoNome" value="Nome" />
+			<p:inputText id="campoNome" style="width:100%;" required="true" requiredMessage="Campo nome é obrigatório" value="#{cadastroClienteMBean.cliente.nome}" />
+			
+			<h:outputLabel for="campoEmail" value="Email" />
+			<p:inputText id="campoEmail" style="width:50%;" required="true" requiredMessage="Campo e-mail é obrigatório" value="#{cadastroClienteMBean.cliente.email}" />
+			
+			<h:outputLabel for="campoSenha" value="Senha" />
+			<p:password id="campoSenha" style="width:25%;" required="true" requiredMessage="Campo senha é obrigatório" value="#{cadastroClienteMBean.senha}" />
+			
+			<h:outputLabel for="campoSenha2" value="Confirmação" />
+			<p:password id="campoSenha2" style="width:25%;" maxlength="8" required="true" requiredMessage="Campo confirmação é obrigatório" value="#{cadastroClienteMBean.senha2}"/>
+			
+		</h:panelGrid>
+			
+	</ui:composition>
+
+</ui:fragment> 
